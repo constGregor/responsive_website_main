@@ -8,7 +8,7 @@
     position: relative;
     position: fixed;
     background-color: $lightestGrey;
-    background-image: url("/images/mountain-menu.svg");
+    background-image: url("./images/mountain-menu.svg");
     background-repeat: no-repeat;
     border-bottom: 1px solid $lightGrey;
     background-size: 9.5rem;
@@ -58,7 +58,7 @@
 
     &::before {
       @include breakpoint-up(medium) {
-        content: url("/images/rectangle-placeholder.svg");
+        content: url("./images/rectangle-placeholder.svg");
         position: absolute;
         top: 33%;
         display: inline-block;
@@ -102,7 +102,7 @@
         font-size: 1.25rem;
       }
       &::before {
-        content: url("/images/rectangle-placeholder.svg");
+        content: url("./images/rectangle-placeholder.svg");
         position: absolute;
         top: 33%;
         left: 61%;
