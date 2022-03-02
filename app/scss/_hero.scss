@@ -1,0 +1,72 @@
+.hero {
+  background-image: url("/images/bg-intro.png");
+  position: relative;
+  width: 100%;
+  height: 28.25rem;
+  min-height: 17rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  &__main-message {
+    background-color: $white;
+    width: 22rem;
+    height: 18rem;
+    right: 50%;
+    position: absolute;
+    top: 20%;
+    width: calc(100% -3rem);
+    transform: translateX(50%);
+    padding: 2rem;
+
+    @include breakpoint-up(medium) {
+      width: 31.5625rem;
+    }
+
+    @include breakpoint-up(large) {
+      top: 15%;
+      right: 68%;
+      width: 35.125rem;
+      height: 18.1875rem;
+      padding: 2rem 6.25rem 2rem 3.438rem;
+    }
+  }
+
+  &__text {
+    font-size: $paragraph;
+    display: flex;
+    flex-direction: column;
+  }
+
+  a {
+    color: $black !important;
+  }
+
+  span {
+    color: $darkGrey;
+    font-size: $paragraph;
+  }
+
+  h2 {
+    font-family: "Squadron-Bold", sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 0;
+
+    @include breakpoint-up(medium) {
+      margin-top: 1rem;
+      font-size: 2.2rem;
+      margin-bottom: 0;
+    }
+
+    @include breakpoint-up(large) {
+      margin-top: 1rem;
+      font-size: 2.5rem;
+      margin-bottom: 0;
+    }
+  }
+
+  p {
+    color: $grey !important;
+    font-size: $paragraph;
+  }
+}

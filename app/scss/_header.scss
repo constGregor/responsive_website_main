@@ -1,0 +1,195 @@
+.header {
+  position: relative;
+  z-index: 1;
+
+  nav {
+    width: 100%;
+    height: 3rem;
+    position: relative;
+    position: fixed;
+    background-color: $lightestGrey;
+    background-image: url("/images/mountain-menu.svg");
+    background-repeat: no-repeat;
+    border-bottom: 1px solid $lightGrey;
+    background-size: 9.5rem;
+    background-position: 80% 150%;
+
+    @include breakpoint-up(medium) {
+      height: 4.44rem;
+      background-size: auto;
+      background-position: 100% 150%;
+      z-index: 3;
+    }
+
+    @include breakpoint-up(large) {
+      padding-left: 4rem;
+      padding-right: 4rem;
+      padding-top: 1.25rem;
+      padding-bottom: 1.25rem;
+      background-size: auto;
+      background-position: 80% 150%;
+    }
+
+    @include breakpoint-up(xlarge) {
+      padding-left: 12rem;
+      padding-right: 12rem;
+      padding-top: 1.25rem;
+      padding-bottom: 1.25rem;
+    }
+  }
+
+  &__logo {
+    margin-left: 1.5rem;
+    img {
+      width: 9.125rem;
+      height: auto;
+
+      @include breakpoint-up(medium) {
+        width: 11.125rem;
+        height: 2.1875rem;
+      }
+    }
+  }
+
+  &__search {
+    @include breakpoint-up(xlarge) {
+      margin-right: 5rem;
+    }
+
+    &::before {
+      @include breakpoint-up(medium) {
+        content: url("/images/rectangle-placeholder.svg");
+        position: absolute;
+        top: 33%;
+        display: inline-block;
+        width: 100%;
+        z-index: 2;
+      }
+    }
+  }
+
+  input {
+    display: none;
+
+    &::placeholder {
+      font-size: 0.875rem;
+      color: $grey;
+    }
+
+    @include breakpoint-up(medium) {
+      display: block;
+      width: 18rem;
+      height: 2.2rem;
+      background-color: $lightestGrey;
+      border: none;
+      border-bottom: 1px solid $darkGrey;
+      outline: none !important;
+      padding-left: 1.8rem;
+    }
+  }
+
+  &__contact {
+    @include breakpoint-up(xlarge) {
+      margin-right: 10rem;
+    }
+
+    p {
+      font-size: $paragraph;
+      color: $grey;
+      span {
+        font-family: "Squadron-Bold", sans-serif;
+        color: $black !important;
+        font-size: 1.25rem;
+      }
+      &::before {
+        content: url("/images/rectangle-placeholder.svg");
+        position: absolute;
+        top: 33%;
+        left: 61%;
+        display: inline-block;
+      }
+
+      @include breakpoint-up(xlarge) {
+        &::before {
+          top: 33%;
+          left: 54%;
+        }
+      }
+    }
+  }
+
+  &__icons {
+    a {
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  &__menu {
+    position: relative;
+    height: 7.8375rem;
+    padding-top: 4.4rem;
+    background-color: $lightestGrey;
+    padding-left: 7rem;
+    padding-right: 12rem;
+
+    @include breakpoint-up(xlarge) {
+      padding-left: 14rem;
+      padding-right: 1rem;
+    }
+
+    a {
+      font-size: 0.8rem;
+      text-decoration: none;
+      color: $black;
+      &:not(:last-child) {
+        margin-right: 2.5rem;
+      }
+
+      @include breakpoint-up(xlarge) {
+        font-size: $menu;
+
+        &:not(:last-child) {
+          margin-right: 3rem;
+        }
+      }
+
+      span {
+        color: $orange;
+      }
+    }
+  }
+
+  &__black-box {
+    margin-left: 4rem;
+    padding-left: 0rem;
+    width: 15rem;
+    min-width: 13rem;
+    height: 3.4375rem;
+    color: $white !important;
+    background-color: black;
+    a {
+      color: white;
+      &::before {
+        content: url("/images/rectangle-placeholder-white.svg");
+        margin-right: 0.5rem;
+        display: inline-block;
+      }
+    }
+  }
+
+  &__toggle {
+    margin-right: 1.5rem;
+    > span {
+      background-color: $darkGrey;
+      display: block;
+      width: 20px;
+      height: 2px;
+
+      &:not(:last-child) {
+        margin-bottom: 3px;
+      }
+    }
+  }
+}

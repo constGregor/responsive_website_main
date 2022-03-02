@@ -1,0 +1,56 @@
+.article {
+  h2 {
+    font-size: 1.875rem;
+    margin-top: 1.56rem;
+    margin-bottom: 2rem;
+    color: $black;
+    font-family: "Squadron-Bold", sans-serif;
+  }
+
+  p {
+    line-height: 1.6rem;
+    font-size: $paragraph;
+    color: $grey;
+  }
+
+  &__item {
+    position: relative;
+    flex-wrap: wrap;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    margin-top: 3rem;
+
+    @include breakpoint-up(large) {
+      display: flex;
+      flex-wrap: nowrap;
+      margin-top: 4.25rem;
+    }
+
+    @include breakpoint-up(xlarge) {
+      padding-left: 23.125rem;
+      padding-right: 23.125rem;
+    }
+  }
+
+  &__text1 {
+    display: inline-block;
+    min-width: 51.5%;
+    position: relative;
+  }
+
+  &__text2 {
+    display: inline-block;
+    min-width: 51.5%;
+    position: relative;
+  }
+
+  &__img1 {
+    position: relative;
+    margin-left: 7.5rem;
+  }
+
+  &__img2 {
+    position: relative;
+    margin-right: 7.5rem;
+  }
+}

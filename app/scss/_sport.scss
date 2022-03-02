@@ -1,0 +1,135 @@
+.sport {
+  &__item {
+    display: flex;
+  }
+
+  &__container {
+    margin-top: 3rem;
+    display: grid;
+    width: 26.5625rem;
+    height: 137.5rem;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: auto;
+    grid-gap: 0.4rem;
+    grid-template-areas:
+      "treking"
+      "treking"
+      "via"
+      "skialpinismus"
+      "trail"
+      "kempovani"
+      "lezeni"
+      "lezeni"
+      "urban"
+      "prace"
+      "vybavit";
+
+    @include breakpoint-up(medium) {
+      margin-top: 4rem;
+      width: 36.5625rem;
+      height: 147.5rem;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: auto;
+      grid-gap: 0.6rem;
+      grid-template-areas:
+        "treking treking"
+        "treking treking"
+        "via skialpinismus"
+        "trail kempovani"
+        "lezeni lezeni"
+        "lezeni lezeni"
+        "urban prace"
+        "vybavit vybavit";
+    }
+
+    @include breakpoint-up(large) {
+      margin-top: 5.6rem;
+      width: 73.75rem;
+      height: 73.75rem;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: auto;
+      grid-gap: 0.6875rem;
+      grid-template-areas:
+        "treking treking via skialpinismus"
+        "treking treking lezeni lezeni"
+        "trail kempovani lezeni lezeni"
+        "urban prace vybavit vybavit";
+    }
+  }
+
+  a {
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+    background-blend-mode: darken;
+  }
+
+  h2 {
+    position: absolute;
+    text-decoration: none !important;
+    color: $white;
+    font-size: 2rem;
+    font-family: "Squadron-Bold", sans-serif;
+
+    @include breakpoint-up(medium) {
+      font-size: $heading;
+    }
+  }
+
+  h3 {
+    position: absolute;
+    text-decoration: none !important;
+    color: $white;
+    font-size: 1.575rem;
+    font-family: "Squadron-Bold", sans-serif;
+
+    @include breakpoint-up(medium) {
+      font-size: 1.875rem;
+    }
+  }
+
+  &__image1 {
+    background: rgba(0, 0, 0, 0.2) url("/images/turistika-treking.png");
+    grid-area: treking;
+  }
+
+  &__image2 {
+    background: rgba(0, 0, 0, 0.2) url("/images/via-ferraty.png");
+    grid-area: via;
+  }
+
+  &__image3 {
+    background: rgba(0, 0, 0, 0.2) url("/images/skialpinismus.png");
+    grid-area: skialpinismus;
+  }
+
+  &__image4 {
+    background: rgba(0, 0, 0, 0.2) url("/images/trail-running.png");
+    grid-area: trail;
+  }
+
+  &__image5 {
+    background: rgba(0, 0, 0, 0.2) url("/images/kempovani.png");
+    grid-area: kempovani;
+  }
+
+  &__image6 {
+    background: rgba(0, 0, 0, 0.2) url("/images/lezeni.png");
+    grid-area: lezeni;
+  }
+
+  &__image7 {
+    background: rgba(0, 0, 0, 0.2) url("/images/urban-outdoor.png");
+    grid-area: urban;
+  }
+
+  &__image8 {
+    background: rgba(0, 0, 0, 0.2) url("/images/prace-ve-vyskach.png");
+    grid-area: prace;
+  }
+
+  &__image9 {
+    background: rgba(0, 0, 0, 0.2) url("/images/jak-se-vybavit.png");
+    grid-area: vybavit;
+  }
+}

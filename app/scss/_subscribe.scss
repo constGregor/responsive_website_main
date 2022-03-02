@@ -1,0 +1,90 @@
+.subscribe {
+  background-image: url("/images/bg-outro.png");
+  position: relative;
+  width: 100%;
+  height: 23rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+
+  @include breakpoint-up(large) {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+
+  &__white-box {
+    background-color: $white;
+    width: 22rem;
+    height: 18rem;
+    right: 50%;
+    position: absolute;
+    top: 20%;
+    width: calc(100% -3rem);
+    transform: translateX(50%);
+    padding: 2rem;
+
+    @include breakpoint-up(large) {
+      top: 15%;
+      right: 68%;
+      width: 31.625rem;
+      height: 16.375rem;
+    }
+  }
+
+  h2 {
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+
+    @include breakpoint-up(medium) {
+      font-size: 1.875rem;
+      margin-top: 0;
+    }
+  }
+
+  p {
+    font-size: $paragraph;
+    color: $grey;
+  }
+
+  a {
+    color: $black;
+    font-size: $paragraph;
+  }
+
+  input {
+    width: 17.3rem;
+    height: 2rem;
+    outline: none;
+    border: 1px solid $black;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+
+    @include breakpoint-up(large) {
+      width: 25rem;
+    }
+
+    &::placeholder {
+      font-size: 0.875rem;
+      color: $grey;
+    }
+  }
+
+  button {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0%;
+    background-color: $white;
+    border: none;
+    border-top: 1px solid $black;
+    border-right: 1px solid $black;
+    border-bottom: 1px solid $black;
+  }
+
+  span {
+    &::before {
+      content: url("/images/rectangle-placeholder.svg");
+    }
+  }
+}
