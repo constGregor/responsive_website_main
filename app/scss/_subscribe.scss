@@ -1,5 +1,5 @@
 .subscribe {
-  background-image: url("./images/bg-outro.png");
+  background-image: url("../../images/bg-outro.png");
   position: relative;
   width: 100%;
   height: 23rem;
@@ -84,7 +84,7 @@
 
   span {
     &::before {
-      content: url("./images/rectangle-placeholder.svg");
+      content: url("../../images/rectangle-placeholder.svg");
     }
   }
 }

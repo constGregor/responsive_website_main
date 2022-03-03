@@ -102,7 +102,7 @@
         font-size: 1.25rem;
       }
       &::before {
-        content: url("./images/rectangle-placeholder.svg");
+        content: url("../../images/rectangle-placeholder.svg");
         position: absolute;
         top: 33%;
         left: 61%;
@@ -172,7 +172,7 @@
     a {
       color: white;
       &::before {
-        content: url("/images/rectangle-placeholder-white.svg");
+        content: url("../../images/rectangle-placeholder-white.svg");
         margin-right: 0.5rem;
         display: inline-block;
       }
